@@ -1,0 +1,58 @@
+<div class="container mt-4 title">
+  <div class="row">
+    <div class="col">
+      <h1><i class="fa-solid fa-eye"></i> &nbsp; View Contact Page</h1>
+
+      <p style="text-align: justify">
+        This is dummy data: Lorem ipsum, dolor sit amet consectetur adipisicing
+        elit. Adipisci expedita id quibusdam, pariatur eligendi, dicta similique
+        ducimus quisquam veritatis voluptatem doloremque quas consectetur amet
+        mollitia corporis quia voluptate? Quaerat iure vitae harum quam culpa.
+        elit. Adipisci expedita id quibusdam, pariatur eligendi, dicta similique
+        ducimus quisquam veritatis voluptatem doloremque quas consectetur amet
+        mollitia corporis quia voluptate? Quaerat iure vitae harum quam culpa.
+      </p>
+    </div>
+  </div>
+
+  <!-- View contact Detailes -->
+  <div class="container mt-4 mb-5">
+    <div class="row border p-5 align-items-center">
+      <div class="col-md-4">
+        <!-- contact image -->
+        <!-- https://www.shareicon.net/data/2016/07/08/116927_man_512x512.png -->
+        <img width="200" [src]="contact.photo" alt="no image" />
+        <br />
+        <a routerLink="/" class="btn btn-warning ms-5 mt-2">
+          <i class="fa-solid fa-circle-left"></i>
+          Go Back</a
+        >
+      </div>
+
+      <!-- <pre>{{ contact.name }}</pre> -->
+      <div class="col-md-8">
+        <!-- contact deatiles -->
+        <ul class="list-group">
+          <li class="list-group-item">
+            Name: <b>{{ contact.name }}</b>
+          </li>
+          <li class="list-group-item">
+            Email: <b>{{ contact.email }}</b>
+          </li>
+          <li class="list-group-item">
+            Mobile: <b>{{ contact.mobile }}</b>
+          </li>
+          <li class="list-group-item">
+            Company: <b>{{ contact.company }}</b>
+          </li>
+          <li class="list-group-item">
+            Title: <b>{{ contact.title }}</b>
+          </li>
+          <li class="list-group-item">
+            Group: <b>{{ groupName }}</b>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
