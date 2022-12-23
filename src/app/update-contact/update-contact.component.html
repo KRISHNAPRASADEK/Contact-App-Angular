@@ -21,47 +21,84 @@
       <div class="col-md-8">
         <form class="border p-3 rounded">
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Name" />
+            <!-- Property Binding -  ngModel-->
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              [(ngModel)]="contact.name"
+              name="contactName"
+            />
           </div>
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Photo URL" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Photo URL"
+              [(ngModel)]="contact.photo"
+              name="contactPhoto"
+            />
           </div>
           <div class="mb-2">
-            <input type="email" class="form-control" placeholder="Email ID" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Email ID"
+              [(ngModel)]="contact.email"
+              name="contactEmail"
+            />
           </div>
           <div class="mb-2">
             <input
               type="text"
               class="form-control"
               placeholder="Mobile Number"
+              [(ngModel)]="contact.mobile"
+              name="contactMobile"
             />
           </div>
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Company" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Company"
+              [(ngModel)]="contact.company"
+              name="contactCompany"
+            />
           </div>
           <div class="mb-2">
-            <input type="text" class="form-control" placeholder="Title" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Title"
+              [(ngModel)]="contact.title"
+              name="contactTitle"
+            />
           </div>
           <div class="mb-2">
-            <select name="" id="" class="form-control">
+            <select
+              name="groupId"
+              [(ngModel)]="contact.groupId"
+              id=""
+              class="form-control"
+            >
               <option value="" selected hidden disabled>Select A Group</option>
-              <option value="">Family</option>
-              <option value="">Friends</option>
+              <!-- ngFor - structural directive -->
+              <option [value]="group.id" *ngFor="let group of groups">
+                {{ group.name }}
+              </option>
             </select>
           </div>
           <div class="mb-2">
-            <input value="Update" type="button" class="btn btn-success" />
+            <input (click)="updateContact()" value="Update" type="button" class="btn btn-success" />
             <a routerLink="/" class="btn btn-warning ms-3">Close</a>
           </div>
         </form>
       </div>
 
       <div class="col-md-4">
-        <img
-          src="https://www.shareicon.net/data/2016/07/08/116927_man_512x512.png"
-          alt="no image"
-          class="contact_image mt-2"
-        />
+        <!-- https://www.shareicon.net/data/2016/07/08/116927_man_512x512.png -->
+        <img [src]="contact.photo" alt="no image" class="contact_image mt-2" />
       </div>
     </div>
   </div>
