@@ -7,7 +7,7 @@ import { MyContact } from 'src/models/myContact';
   providedIn: 'root',
 })
 export class ApiService {
-  baseUrl: string = 'https://contact-api-e6s0.onrender.com/contacts';
+  baseUrl: string = 'https://contactapp-api.onrender.com/contacts';
   // http://localhost:3000/contacts
 
   constructor(private http: HttpClient) {}
@@ -25,7 +25,7 @@ export class ApiService {
   //function for getting particular group name
   getGroupName(groupId: string) {
     return this.http.get(
-      'https://contact-api-e6s0.onrender.com/groups/' + groupId
+      'https://contactapp-api.onrender.com/groups/' + groupId
     );
   }
 
