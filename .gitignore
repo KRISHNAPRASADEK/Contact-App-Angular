@@ -9,6 +9,7 @@
 
 # dependencies
 /node_modules
+/src/assets/server
 
 # environments
 
