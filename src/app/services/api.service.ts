@@ -1,14 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { MyContact } from 'src/models/myContact';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
-  baseUrl: string = environment.API_URL;
+  baseUrl: string = 'https://ill-puce-crane-coat.cyclic.app';
   // http://localhost:3000/contacts
 
   constructor(private http: HttpClient) {}
