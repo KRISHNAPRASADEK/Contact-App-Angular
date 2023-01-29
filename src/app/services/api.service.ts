@@ -7,7 +7,7 @@ import { MyContact } from 'src/models/myContact';
   providedIn: 'root',
 })
 export class ApiService {
-  baseUrl: string = 'https://ill-puce-crane-coat.cyclic.app';
+  baseUrl: string = 'https://json-server-contactapp-production.up.railway.app';
   // http://localhost:3000/contacts
 
   constructor(private http: HttpClient) {}
@@ -46,6 +46,9 @@ export class ApiService {
 
   // update contact detailes according to the user select
   updateContact(contactId: any, contactBody: any) {
+    console.log(contactBody);
+    console.log(`${this.baseUrl}/contacts/${contactId}`);
+
     return this.http.put(`${this.baseUrl}/contacts/${contactId}`, contactBody);
   }
 }
